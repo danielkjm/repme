@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Nav from './Nav';
-import Footer from './Footer';
+import USAMap from 'react-usa-map';
 
 class Home extends Component {
   constructor() {
@@ -8,8 +7,22 @@ class Home extends Component {
     this.state = {};
   }
 
+  mapHandler(e) {
+    console.log(e.target.dataset.name);
+  }
+
+  statesCustomConfig(e) {}
   render() {
-    return <div className="home" />;
+    return (
+      <div className="home">
+        <div className="us-map">
+          <USAMap
+            customize={this.statesCustomConfig()}
+            onClick={this.mapHandler}
+          />
+        </div>
+      </div>
+    );
   }
 }
 
