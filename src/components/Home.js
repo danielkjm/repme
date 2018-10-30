@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import USAMap from 'react-usa-map';
+import axios from 'axios';
 
 class Home extends Component {
   constructor() {
@@ -11,16 +12,26 @@ class Home extends Component {
     console.log(e.target.dataset.name);
   }
 
-  statesCustomConfig(e) {}
+  test() {
+    const url =
+      'https://api.propublica.org/congress/v1/115/senate/members.json';
+    axios
+      .get(url, {
+        headers: { 'X-API-Key': 'D6RcdBv0VgQc7gVVFxUO97umVSHtbwgzUlywB67p ' }
+      })
+      .then(response => {
+        // If request is good...
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.log('error 3 ' + error);
+      });
+  }
   render() {
     return (
       <div className="home">
-        <div className="us-map">
-          <USAMap
-            customize={this.statesCustomConfig()}
-            onClick={this.mapHandler}
-          />
-        </div>
+        <USAMap onClick={this.mapHandler} />
+        <button onClick={this.test} />
       </div>
     );
   }
