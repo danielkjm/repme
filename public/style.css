@@ -68,7 +68,7 @@ button {
 }
 
 .state-info {
-  border: 1px rgb(36, 36, 36) solid;
+  /* border: 1px rgb(36, 36, 36) solid; */
   font-family: Montserrat;
   display: flex;
   padding: 2.5rem;
@@ -86,7 +86,9 @@ button {
 .column-title {
   font-weight: 500;
   font-size: 1.2em;
-  margin-bottom: 3rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px black solid;
 }
 
 .members-list {
