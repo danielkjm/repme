@@ -7,7 +7,12 @@ class Home extends Component {
   }
 
   render() {
-    return <div className="header">RepMe</div>;
+    return (
+      <div className="header">
+        <div>RepMe</div>
+        <div className="login">login</div>
+      </div>
+    );
   }
 }
 

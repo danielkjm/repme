@@ -9,7 +9,6 @@ body {
 }
 
 .header {
-  border-bottom: 1px rgb(36, 36, 36) solid;
   font-family: Montserrat;
   font-size: 3em;
   width: 100%;
@@ -17,8 +16,21 @@ body {
   text-align: center;
   margin-bottom: 6rem;
   color: rgb(36, 36, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
+.login {
+  font-size: 0.4em;
+  position: relative;
+  left: 24%;
+}
+
+.login:hover {
+  cursor: pointer;
+}
 path {
   pointer-events: all;
 }
@@ -34,7 +46,12 @@ path:hover {
   flex-direction: column;
 }
 
-.home-body {
+.dub-homeBod {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sing-homeBod {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,4 +65,44 @@ path:hover {
 
 button {
   width: 50px;
+}
+
+.state-info {
+  border: 1px rgb(36, 36, 36) solid;
+  font-family: Montserrat;
+  display: flex;
+  padding: 2.5rem;
+  align-items: flex-start;
+}
+
+.senators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+
+.column-title {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 3rem;
+}
+
+.members-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.member {
+  margin-bottom: 3rem;
+}
+
+.house {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
