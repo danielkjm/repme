@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import USAMap from 'react-usa-map';
 import axios from 'axios';
+import Header from './Header';
 
 class Home extends Component {
   constructor() {
@@ -30,8 +31,11 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <USAMap onClick={this.mapHandler} />
-        <button onClick={this.test} />
+        <Header />
+        <div className="home-body">
+          <USAMap onClick={this.mapHandler} />
+          <button onClick={this.test} />
+        </div>
       </div>
     );
   }
